@@ -15,24 +15,22 @@ fi
 OSTYPE=`uname`
 
 rm -f ${SPIDER}.csv
-scrapy crawl ${SPIDER} -t csv -o ${SPIDER}.csv --nolog
+scrapy crawl ${SPIDER} -t csv -o ${SPIDER}.csv --logfile=${SPIDER}.log
 
 if [ ${OSTYPE} = "Linux" ]
 then
-    line_count=`wc -l ${SPIDER}.csv | cut -f 1 -d ' '`
-    if [ ${line_count} = "0" ]
+    line_count=`grep log_count/ERROR ${SPIDER}.log`
+    if [ $? = "0" ]
     then
-        wc -l ${SPIDER}.csv
         exit 1
     else
         exit 0
     fi
 elif [ ${OSTYPE} = "Darwin" ]
 then
-    line_count=`wc -l ${SPIDER}.csv | cut -c 7-8`
-    if [ "${line_count}" = " 0" ]
+    line_count=`grep log_count/ERROR ${SPIDER}.log`
+    if [ $? = "0" ]
     then
-        wc -l ${SPIDER}.csv
         exit 1
     else
         exit 0
