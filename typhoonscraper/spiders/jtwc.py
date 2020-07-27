@@ -15,10 +15,10 @@ class JtwcSpider(scrapy.Spider):
         except KeyError:
             self.proxy = ''
         self.allowed_domains = [ "metoc.navy.mil", self.proxy ]
-        if self.proxy == '':
-            url = 'https://www.metoc.navy.mil/jtwc/rss/jtwc.rss'
-        else:
+        if re.search('[a-z]', self.proxy):
             url = 'https://%s/www.metoc.navy.mil/jtwc/rss/jtwc.rss' % self.proxy
+        else:
+            url = 'https://www.metoc.navy.mil/jtwc/rss/jtwc.rss'
         self.start_urls = [ url ]
 
     def conv_reporttime(self, report_time):
