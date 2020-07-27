@@ -9,7 +9,7 @@ class JtwcSpider(scrapy.Spider):
     ktstokmh = 1.852
     wind_unit = u'KMH'
 
-    def __init__(self):
+    def __init__(self, **kwargs):
         try:
             self.proxy = os.environ['JTWC_PROXY']
         except KeyError:
