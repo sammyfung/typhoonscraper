@@ -14,10 +14,11 @@ class JtwcSpider(scrapy.Spider):
             self.proxy = os.environ['JTWC_PROXY']
         except KeyError:
             self.proxy = ''
-        self.allowed_domains = [ "metoc.navy.mil", self.proxy ]
-        if re.search('[a-z]', self.proxy):
+        if len(self.proxy) > 0:
+            self.allowed_domains = ["metoc.navy.mil", self.proxy]
             url = 'https://%s/www.metoc.navy.mil/jtwc/rss/jtwc.rss' % self.proxy
         else:
+            self.allowed_domains = ["metoc.navy.mil"]
             url = 'https://www.metoc.navy.mil/jtwc/rss/jtwc.rss'
         self.start_urls = [ url ]
 
@@ -36,7 +37,7 @@ class JtwcSpider(scrapy.Spider):
 
     def parse(self, response):
         items = []
-        if self.proxy == '':
+        if len(self.proxy) > 0:
             prefix = 'https://'
         else:
             prefix = 'https://%s/' % self.proxy
