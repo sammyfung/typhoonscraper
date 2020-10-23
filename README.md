@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/sammyfung/typhoonscraper.svg?branch=master)](https://travis-ci.com/sammyfung/typhoonscraper)
+[![codecov](https://codecov.io/gh/sammyfung/typhoonscraper/branch/master/graph/badge.svg?token=N73YVH22EV)](https://codecov.io/gh/sammyfung/typhoonscraper)
 
 # typhoonscraper
 typhoonscraper is an open source web scraper project to scrape Tropical Cyclone and Typhoon data from Meteorological Agencies in the world. It can return past and forecast position and other information of tropical cyclone traced by different agenices.
