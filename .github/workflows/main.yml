@@ -1,7 +1,11 @@
 name: Typhoon Scraper
 
 on:
-  [ push ]
+  push:
+    branches: 
+      - master
+  schedule:
+    - cron: '0 5 * * *'
 
 jobs:
   build:
