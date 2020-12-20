@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/sammyfung/typhoonscraper.svg?branch=master)](https://travis-ci.com/sammyfung/typhoonscraper)
+![Typhoon Scraper](https://github.com/sammyfung/typhoonscraper/workflows/Typhoon%20Scraper/badge.svg)
 [![codecov](https://codecov.io/gh/sammyfung/typhoonscraper/branch/master/graph/badge.svg?token=N73YVH22EV)](https://codecov.io/gh/sammyfung/typhoonscraper)
 
 # typhoonscraper
