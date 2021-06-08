@@ -10,3 +10,9 @@ Data can be exported to JSON, CSV, XML format with Scrapy built-in outputs.
 ## Supported Agency
 * [Joint Typhoon Warning Center (JTWC)](https://www.metoc.navy.mil/jtwc/jtwc.html)
 * [Japan Meteorological Agency](http://www.jma.go.jp)
+
+## Sponsors
+
+Calvin Tsang.
+
+Thanks for my sponsors, please consider to [sponsor](https://github.com/sponsors/sammyfung) my works.
